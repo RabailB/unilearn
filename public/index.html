@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniLearn - Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container card">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">UniLearn Login</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="roll_no">Roll Number</label>
+                    <input type="text" id="roll_no" class="form-control" placeholder="Enter your Roll No" required>
+                    <div class="error-msg" id="rollError">Please enter a valid Roll Number.</div>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" class="form-control" placeholder="Enter Password" required>
+                    <div class="error-msg" id="passError">Password is required.</div>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Login</button>
+            </form>
+            <div style="margin-top: 1rem; text-align: center; font-size: 0.9rem;">
+                <p>New User? <a href="register.html">Register here</a></p>
+                <p id="forgotPasswordSection" style="margin-top: 0.5rem;"><a href="#" id="forgotPasswordLink">Forgot Password?</a></p>
+                <div id="passwordReveal" style="margin-top: 0.5rem; color: var(--secondary-color); font-weight: bold; display: none;"></div>
+            </div>
+            <div id="loginMessage" style="text-align: center; margin-top: 1rem; color: red;"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        // Inline script for specific page logic logic to keep script.js cleaner for shared stuff? 
+        // Or put everything in script.js. I'll put specific logic here to avoid cluttering script.js 
+        // or check page ID in script.js. I'll use script.js for shared functions. 
+        // I will add the specific event listener here or in script.js checking for element existence.
+        // Actually, for cleaner structure, I'll put it in script.js but wrap it in existence check.
+    </script>
+</body>
+</html>

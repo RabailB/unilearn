@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniLearn - Register</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container card">
+            <h2 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">Create Account</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regName">Full Name</label>
+                    <input type="text" id="regName" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Email</label>
+                    <input type="email" id="regEmail" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="regRoll">Roll Number</label>
+                    <input type="text" id="regRoll" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPass">Password</label>
+                    <input type="password" id="regPass" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="regConfirmPass">Confirm Password</label>
+                    <input type="password" id="regConfirmPass" class="form-control" required>
+                    <div class="error-msg" id="matchError">Passwords do not match.</div>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Register</button>
+            </form>
+            <div style="margin-top: 1rem; text-align: center;">
+                <p>Already have an account? <a href="index.html">Login here</a></p>
+            </div>
+            <div id="regMessage" style="text-align: center; margin-top: 1rem;"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

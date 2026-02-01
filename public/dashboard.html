@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniLearn - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="dashboard.html" class="logo">UniLearn.</a>
+            <div class="nav-links">
+                <a href="dashboard.html" class="active">Courses</a>
+                <a href="progress.html">My Progress</a>
+                <a href="add_course.html">Admin</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="#" id="logoutBtn">Logout</a>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Welcome, <span id="userName">Student</span></h1>
+            <div class="filters">
+                <input type="text" id="searchInput" class="form-control" placeholder="Search courses..."
+                    style="width: 250px;">
+                <select id="categoryFilter" class="form-control" style="width: 150px;">
+                    <option value="All">All Categories</option>
+                    <option value="Development">Development</option>
+                    <option value="Data Science">Data Science</option>
+                    <option value="Design">Design</option>
+                    <option value="Marketing">Marketing</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="quoteBox" class="quote-box">
+            "Loading inspiration..."
+        </div>
+
+        <div id="courseGrid" class="course-grid">
+            <!-- Courses inserted here by JS -->
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        // Ensure authentication
+        checkSession();
+        // Load features
+        loadQuote();
+        loadCourses();
+    </script>
+</body>
+
+</html>

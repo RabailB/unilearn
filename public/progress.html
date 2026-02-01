@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UniLearn - My Progress</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="dashboard.html" class="logo">UniLearn.</a>
+            <div class="nav-links">
+                <a href="dashboard.html">Courses</a>
+                <a href="#" id="logoutBtn">Logout</a>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 style="margin-top: 2rem;">My Learning Progress</h1>
+        <div id="progressContainer" class="course-grid">
+            <!-- Completed courses loaded from LocalStorage -->
+            <p>Loading progress...</p>
+        </div>
+        <button onclick="localStorage.clear(); location.reload();" class="btn btn-secondary"
+            style="margin-top: 2rem;">Reset Progress</button>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        checkSession();
+        loadProgress();
+    </script>
+</body>
+
+</html>
